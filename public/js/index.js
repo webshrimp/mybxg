@@ -1,10 +1,11 @@
-require.config({
+requirejs.config({
     paths: {
         "jquery": "/public/assets/jquery/jquery.min",
         "bootstrap": "/public/assets/bootstrap/js/bootstrap.min",
         "echarts": "/public/assets/echarts/echarts.min",
         "cookie": "/public/assets/jquery-cookie/jquery.cookie",
-        "NProgress": "/public/assets/nprogress/nprogress"
+        "NProgress": "/public/assets/nprogress/nprogress",
+        "template": "/public/assets/art-template/template-web"
     },
     shim: {
         "bootstrap": {
@@ -21,6 +22,8 @@ require.config({
 
 require(["jquery","echarts","bootstrap","exit","common"], function ($ , echarts) {
     //基于准备好的dom，初始化echarts实例
+
+
     var myChart = echarts.init(document.getElementById('main'));
 
     // 指定图表的配置项和数据

@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <title>学IT - 后台管理系统</title>
     <?php include('/view/common/link.html') ?>
+    <script type="text/template" id="userinfotpl">
+        {{if info}}
+            <div class="avatar img-circle">
+                <img src="{{info.tc_avatar}}">
+                </div>
+                <h4>{{info.tc_name}}</h4>
+        {{/if}}
+    </script>
 
 </head>
 <body>

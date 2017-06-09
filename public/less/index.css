@@ -53,9 +53,6 @@ a:focus {
   overflow: hidden;
   border: 3px solid rgba(255, 255, 255, 0.3);
 }
-.aside .profile img {
-  display: none;
-}
 .aside .profile h4 {
   color: #a9b0c2;
   font-size: 16px;

@@ -1,4 +1,4 @@
-define(["jquery","../assets/nprogress/nprogress","../assets/jquery-cookie/jquery.cookie"], function ($, NProgress) {
+define(["jquery","NProgress","template","cookie"], function ($, NProgress, template) {
     //鼠标点击事件
     NProgress.start();
     //
@@ -13,8 +13,8 @@ define(["jquery","../assets/nprogress/nprogress","../assets/jquery-cookie/jquery
         location.href= "/login";
     }else if($.cookie("PHPSESSID")){
         var info = JSON.parse($.cookie("info"));
-        $(".profile img").css("display","block").attr("src",info.tc_avatar);
-        $(".profile h4").text(info.tc_name);
+        var html = template("userinfotpl",{info:info});
+        $("#profile").html(html);
     }
 
 });
