@@ -1,11 +1,14 @@
-requirejs.config({
+require.config({
+    baseUrl: "/",
     paths: {
         "jquery": "/public/assets/jquery/jquery.min",
         "bootstrap": "/public/assets/bootstrap/js/bootstrap.min",
         "echarts": "/public/assets/echarts/echarts.min",
         "cookie": "/public/assets/jquery-cookie/jquery.cookie",
         "NProgress": "/public/assets/nprogress/nprogress",
-        "template": "/public/assets/art-template/template-web"
+        "template": "/public/assets/art-template/template-web",
+        "exit": "/public/js/exit",
+        "common": "/public/js/common"
     },
     shim: {
         "bootstrap": {

@@ -12,9 +12,16 @@ define(["jquery","NProgress","template","cookie"], function ($, NProgress, templ
     if(!(location.pathname=="/login"||location.pathname=="/index/login") && !$.cookie("PHPSESSID")){
         location.href= "/login";
     }else if($.cookie("PHPSESSID")){
-        var info = JSON.parse($.cookie("info"));
-        var html = template("userinfotpl",{info:info});
-        $("#profile").html(html);
+        if($("#profile").length==1){
+            var info = JSON.parse($.cookie("info"));
+            var html = template("userinfotpl",{info:info});
+            $("#profile").html(html);
+            var pathname = location.pathname;
+            $("ul a[href='"+pathname+"']").parent().addClass("active")
+        }
+
     }
+
+
 
 });
